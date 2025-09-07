@@ -83,6 +83,18 @@
       border-radius: 10px;
       text-align: center;
       color: #fff;
+      animation: fadeInScale 0.5s ease-out;
+    }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     .modal-header {
@@ -142,7 +154,7 @@
     <div class="modal-content">
       <div class="modal-header">guitariran.com</div>
       <div class="modal-message" id="modalMessage">پیام</div>
-      <button class="modal-button" onclick="closeModal()">باشه</button>
+      <button class="modal-button" onclick="closeModal()">Ok</button>
     </div>
   </div>
 
